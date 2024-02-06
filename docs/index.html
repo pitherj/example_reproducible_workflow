@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="pandoc" />
+
+        <meta name="author" content="Jason" />
+    
+        <meta name="date" content="2024-02-06" />
+    
+    <title>Example reproducible workflow</title>
+
+        <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="site_libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="site_libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script src="site_libs/navigation-1.1/tabsets.js"></script>
+        <link href="site_libs/robobook-0.1/robobook.css" rel="stylesheet" />
+        <link href="site_libs/robobook-0.1/robobook_fonts_embed.css" rel="stylesheet" />
+        <script src="site_libs/robobook-0.1/robobook.js"></script>
+        <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+        <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+        <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+    
+    
+    
+    
+    <!-- tabsets -->
+    <script>
+      $(document).ready(function () {
+	  window.buildTabsets("toc");
+      });
+      $(document).ready(function () {
+	  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+	      $(this).parent().toggleClass('nav-tabs-open')
+	  });
+      });
+    </script>
+
+    <!-- code folding -->
+    
+    <!-- code download -->
+    
+    <!-- tabsets dropdown -->
+
+    <style type="text/css">
+      .tabset-dropdown > .nav-tabs {
+	  display: inline-table;
+	  max-height: 500px;
+	  min-height: 44px;
+	  overflow-y: auto;
+	  background: white;
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+	  content: "&#xe258;";
+	  border: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active {
+	  display: block;
+      }
+
+      .tabset-dropdown > .nav-tabs > li.active a {
+  	  padding: 0 15px !important;
+      }
+
+      .tabset-dropdown > .nav-tabs > li > a,
+      .tabset-dropdown > .nav-tabs > li > a:focus,
+      .tabset-dropdown > .nav-tabs > li > a:hover {
+	  border: none;
+	  display: inline-block;
+	  border-radius: 4px;
+	  background-color: transparent;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+	  display: block;
+	  float: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li {
+	  display: none;
+	  margin-left: 0 !important;
+      }
+    </style>
+    
+</head>
+
+<body class="preload">
+
+   	
+            <!-- robobook start -->   
+   <div class="book with-summary">
+      <div class="book-summary">
+        <ul>
+          <li class="title">Example reproducible workflow</li>
+          <li class="divider"></li>
+        </ul>
+        <nav role="navigation" id="toc">
+          <ul>
+          <li><a href="#welcome" id="toc-welcome"><span class="toc-section-number">1</span> Welcome</a></li>
+          <li><a href="#pre-project-checklist" id="toc-pre-project-checklist"><span class="toc-section-number">2</span> Pre-project checklist</a></li>
+          <li><a href="#project-setup" id="toc-project-setup"><span class="toc-section-number">3</span> Project setup</a>
+          <ul>
+          <li><a href="#section" id="toc-section"><span class="toc-section-number">3.1</span> </a></li>
+          </ul></li>
+          </ul>
+        </nav>
+        <ul class="authors">
+          <li class="divider"></li>
+                                <li><span><i class="glyphicon glyphicon-user"></i> Jason</span></li>
+                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 2024-02-06</span></li>
+                  </ul>     
+      </div>
+      <div class="book-body fixed">
+        <div class="body-inner">
+            <a class="btn pull-left js-toolbar-action toggle-sidebar" aria-label="Toggle Sidebar" title="Toggle Sidebar" href="#">
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </a>
+            <div class="page-inner">
+              <section id="content" class="normal">
+      
+   
+      
+      <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Example reproducible workflow</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="about.html">About</a>
+      </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container -->
+      </div><!--/.navbar -->
+        
+      <h1 class="title">Example reproducible workflow</h1>
+      
+        
+
+   
+      
+   
+<!-- Don't indent these lines or it will mess pre blocks indentation --> 
+<style type="text/css">
+pre, code {white-space:pre !important; overflow-x:auto}
+</style>
+<div id="welcome" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Welcome</h1>
+<p>This website is geared towards researchers with limited experience in open science practices.</p>
+<p>It provides step-by-step pointers on how to ensure your research project is reproducible, discoverable, and appropriately archived.</p>
+<p>The guidelines provided here make use of tools that we have found useful, and for which we’ve identified helpful resources: R/RStudio, Git/Github, OSF, and Zotero. However, other tools can be used to equal effect for achieving the overall goal of reproducibility.</p>
+<p>The website is meant to be succinct, and used as a form of checklist. Each step/point links out to useful guidelines/resources about that step. Where available, it provides resources from the University of British Columbia, the authors’ home institution.</p>
+<p>This work is lisenced under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-Non Commercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a>.</p>
+<p><strong>Citation</strong></p>
+<p>Please use the following for citing this document:</p>
+<p>Pither, J., Vis-Dunbar, M. (2024). An example workflow for a reproducible and discoverable research project. <a href="https://pitherj.github.io/example_reproducible_workflow/" class="uri">https://pitherj.github.io/example_reproducible_workflow/</a></p>
+<p>All source files are available at <a href="https://github.com/pitherj/example_reproducible_workflow/tree/main">https://github.com/pitherj/example_reproducible_workflow/tree/main</a></p>
+</div>
+<div id="pre-project-checklist" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Pre-project checklist</h1>
+<ul>
+<li><a href="https://happygitwithr.com/install-git">have Git installed on local computer</a></li>
+<li><a href="https://happygitwithr.com/github-acct">have GitHub account</a></li>
+<li><a href="https://orcid.org/">have ORCID account</a></li>
+<li><a href="https://osf.io/">have OSF account</a></li>
+<li><a href="https://happygitwithr.com/install-r-rstudio">ensure “R” and RStudio are installed</a></li>
+<li><a href="https://www.zotero.org/">have Zotero account</a></li>
+<li><a href="https://www.zotero.org/">Zotero desktop app installed</a></li>
+<li>(optional) <a href="https://www.zotero.org/support/kb/safari_compatibility">Zotero browser connector activated</a></li>
+<li>(optional) <a href="http://zotfile.com/">Zotfile plugin installed</a></li>
+</ul>
+</div>
+<div id="project-setup" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Project setup</h1>
+<ul>
+<li>Look for relevant <a href="https://csc.ok.ubc.ca/workshops/">workshops at UBCO (R, Git and GitHub, Bash, Copyright…)</a></li>
+<li>Request a lab workshop by emailing the CSC <a href="mailto:csc.ok@ubc.ca" class="email">csc.ok@ubc.ca</a></li>
+</ul>
+<div id="section" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> </h2>
+</div>
+</div>
+
+   
+   
+           </section>
+  </div>
+  </div>
+  </div>
+  </div>
+      
+      
+
+  <script>
+    $(document).ready(function () {
+
+		// add bootstrap table styles to pandoc tables
+	$('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+		
+ 		
+	    });
+  </script>
+
+
+
+    <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+	document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+  
+</body>
+</html>
