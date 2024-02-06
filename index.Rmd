@@ -1,0 +1,61 @@
+---
+title: "Example reproducible workflow"
+author: "Jason"
+date: "`r Sys.Date()`"
+output: 
+  rmdformats::robobook:
+    toc_depth: 2
+    toc_float: 
+      collapsed: FALSE
+    use_bookdown: TRUE
+fig_caption: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+options(scipen = 999)
+```
+
+```{css, echo=FALSE}
+pre, code {white-space:pre !important; overflow-x:auto}
+```
+
+
+# Welcome
+
+This website is geared towards researchers with limited experience in open science practices.
+
+It provides step-by-step pointers on how to ensure your research project is reproducible, discoverable, and appropriately archived. 
+
+The guidelines provided here make use of tools that we have found useful, and for which we've identified helpful resources: R/RStudio, Git/Github, OSF, and Zotero. However, other tools can be used to equal effect for achieving the overall goal of reproducibility. 
+
+The website is meant to be succinct, and used as a form of checklist. Each step/point links out to useful guidelines/resources about that step. Where available, it provides resources from the University of British Columbia, the authors’ home institution.
+
+This work is lisenced under the [Creative Commons Attribution-Non Commercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+**Citation**
+
+Please use the following for citing this document:
+
+Pither, J., Vis-Dunbar, M. (2024). An example workflow for a reproducible and discoverable research project. https://pitherj.github.io/example_reproducible_workflow/
+
+All source files are available at [https://github.com/pitherj/example_reproducible_workflow/tree/main](https://github.com/pitherj/example_reproducible_workflow/tree/main)
+
+# Pre-project checklist
+
+- [have Git installed on local computer](https://happygitwithr.com/install-git)
+- [have GitHub account](https://happygitwithr.com/github-acct)
+- [have ORCID account](https://orcid.org/)
+- [have OSF account](https://osf.io/)
+- [ensure “R” and RStudio are installed](https://happygitwithr.com/install-r-rstudio)
+- [have Zotero account](https://www.zotero.org/)
+- [Zotero desktop app installed](https://www.zotero.org/)
+- (optional) [Zotero browser connector activated](https://www.zotero.org/support/kb/safari_compatibility)
+- (optional) [Zotfile plugin installed](http://zotfile.com/)
+
+# Project setup
+
+- Look for relevant [workshops at UBCO (R, Git and GitHub, Bash, Copyright…)](https://csc.ok.ubc.ca/workshops/)
+- Request a lab workshop by emailing the CSC csc.ok@ubc.ca
+
+## 
