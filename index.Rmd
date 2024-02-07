@@ -39,7 +39,7 @@ Pither, J., Vis-Dunbar, M. (2024). An example workflow for a reproducible and di
 
 All source files are available at [https://github.com/pitherj/example_reproducible_workflow/tree/main](https://github.com/pitherj/example_reproducible_workflow/tree/main).  
 
-This is a work in progress, and we welcome your feedback! Please email Jason if you have any (jason [dot] pither <at> ubc [dot] ca).
+This is a work in progress, and we welcome your feedback! Please email Jason if you have any (jason [dot] pither (at) ubc [dot] ca).
 
 **Need help?**
 
