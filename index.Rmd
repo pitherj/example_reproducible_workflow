@@ -23,15 +23,13 @@ pre, code {white-space:pre !important; overflow-x:auto}
 
 # Welcome
 
-This website is geared towards researchers with limited experience in open science practices.
-
-It provides step-by-step pointers on how to ensure a research project is reproducible, discoverable, and appropriately archived. 
+This website is geared towards researchers at any career stage who wish to improve the reproducibility of their research.
 
 The guidelines provided here make use of tools that we have found useful, and for which we've identified helpful online resources: R/RStudio, Git/Github, OSF, and Zotero. However, other tools can be used to equal effect for achieving the overall goal of reproducibility. 
 
-The website is meant to be succinct, and used as a form of checklist. Each step/point links out to guidelines/resources about that step. Where available, it provides resources from the University of British Columbia, the authors’ home institution.
+The website is meant to be succinct, and used as a form of checklist. Throughout, we provide links to external resources that will help implement the steps of the workflow.  Where available, we link to resources from the University of British Columbia, the authors’ home institution.
 
-This work is lisenced under the [Creative Commons Attribution-Non Commercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+This work is licenced under the [Creative Commons Attribution-Non Commercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 **Citation**
 
@@ -39,7 +37,15 @@ Please use the following for citing this document:
 
 Pither, J., Vis-Dunbar, M. (2024). An example workflow for a reproducible and discoverable research project. https://pitherj.github.io/example_reproducible_workflow/
 
-All source files are available at [https://github.com/pitherj/example_reproducible_workflow/tree/main](https://github.com/pitherj/example_reproducible_workflow/tree/main)
+All source files are available at [https://github.com/pitherj/example_reproducible_workflow/tree/main](https://github.com/pitherj/example_reproducible_workflow/tree/main).  
+
+This is a work in progress, and we welcome your feedback! Please email Jason if you have any (jason [dot] pither <at> ubc [dot] ca).
+
+**Need help?**
+
+- Look for relevant [workshops at UBCO (R, Git and GitHub, Bash, Copyright…)](https://csc.ok.ubc.ca/workshops/). 
+- Book an appointment with a [UBC Okanagan Research Data Consultant](https://csc.ok.ubc.ca/consultations/research-data-consultation/) 
+- Request a lab workshop by emailing the CSC csc.ok@ubc.ca
 
 ***
 
@@ -54,11 +60,6 @@ All source files are available at [https://github.com/pitherj/example_reproducib
 - [Zotero desktop app installed](https://www.zotero.org/)
 - (optional) [Zotero browser connector activated](https://www.zotero.org/support/kb/safari_compatibility)
 - (optional) [Zotfile plugin installed](http://zotfile.com/)
-
-**Need help?**
-
-- Look for relevant [workshops at UBCO (R, Git and GitHub, Bash, Copyright…)](https://csc.ok.ubc.ca/workshops/)
-- Request a lab workshop by emailing the CSC csc.ok@ubc.ca
 
 ***
 
