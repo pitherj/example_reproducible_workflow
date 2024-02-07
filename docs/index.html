@@ -119,11 +119,40 @@
         <nav role="navigation" id="toc">
           <ul>
           <li><a href="#welcome" id="toc-welcome"><span class="toc-section-number">1</span> Welcome</a></li>
-          <li><a href="#pre-project-checklist" id="toc-pre-project-checklist"><span class="toc-section-number">2</span> Pre-project checklist</a></li>
-          <li><a href="#project-setup" id="toc-project-setup"><span class="toc-section-number">3</span> Project setup</a>
+          <li><a href="#preproject" id="toc-preproject"><span class="toc-section-number">2</span> Pre-project checklist</a></li>
+          <li><a href="#setup" id="toc-setup"><span class="toc-section-number">3</span> Project setup</a>
           <ul>
-          <li><a href="#section" id="toc-section"><span class="toc-section-number">3.1</span> </a></li>
+          <li><a href="#rstudio-github" id="toc-rstudio-github"><span class="toc-section-number">3.1</span> RStudio + Github</a></li>
+          <li><a href="#osf" id="toc-osf"><span class="toc-section-number">3.2</span> OSF</a></li>
+          <li><a href="#zotero" id="toc-zotero"><span class="toc-section-number">3.3</span> Zotero</a></li>
           </ul></li>
+          <li><a href="#prereg" id="toc-prereg"><span class="toc-section-number">4</span> Pre-registration</a>
+          <ul>
+          <li><a href="#part-i-preparation" id="toc-part-i-preparation"><span class="toc-section-number">4.1</span> Part-I: Preparation</a></li>
+          <li><a href="#part-ii.i-optional-analysis-to-inform-study-design" id="toc-part-ii.i-optional-analysis-to-inform-study-design"><span class="toc-section-number">4.2</span> Part-II.i: (OPTIONAL): Analysis to inform study-design</a></li>
+          <li><a href="#part-ii.ii-data-management-plan" id="toc-part-ii.ii-data-management-plan"><span class="toc-section-number">4.3</span> Part-II.ii: Data Management Plan</a></li>
+          <li><a href="#part-iii-submission" id="toc-part-iii-submission"><span class="toc-section-number">4.4</span> Part-III: Submission</a></li>
+          </ul></li>
+          <li><a href="#analysis" id="toc-analysis"><span class="toc-section-number">5</span> Analysis &amp; Writing</a>
+          <ul>
+          <li><a href="#rstudio-github-1" id="toc-rstudio-github-1"><span class="toc-section-number">5.1</span> RStudio + Github</a></li>
+          <li><a href="#osf-1" id="toc-osf-1"><span class="toc-section-number">5.2</span> OSF</a></li>
+          <li><a href="#zotero-1" id="toc-zotero-1"><span class="toc-section-number">5.3</span> Zotero</a></li>
+          </ul></li>
+          <li><a href="#dissemination" id="toc-dissemination"><span class="toc-section-number">6</span> Dissemination</a>
+          <ul>
+          <li><a href="#rstudio-github-2" id="toc-rstudio-github-2"><span class="toc-section-number">6.1</span> RStudio + Github</a></li>
+          <li><a href="#osf-2" id="toc-osf-2"><span class="toc-section-number">6.2</span> OSF</a></li>
+          <li><a href="#manuscript-submission" id="toc-manuscript-submission"><span class="toc-section-number">6.3</span> Manuscript submission</a></li>
+          <li><a href="#manuscript-revisions" id="toc-manuscript-revisions"><span class="toc-section-number">6.4</span> Manuscript revisions</a></li>
+          </ul></li>
+          <li><a href="#archiving" id="toc-archiving"><span class="toc-section-number">7</span> Project archiving</a>
+          <ul>
+          <li><a href="#option-1-osf" id="toc-option-1-osf"><span class="toc-section-number">7.1</span> Option 1: OSF</a></li>
+          <li><a href="#option-2-borealis-dataverse" id="toc-option-2-borealis-dataverse"><span class="toc-section-number">7.2</span> Option 2: Borealis Dataverse</a></li>
+          <li><a href="#option-3-osf-dataverse" id="toc-option-3-osf-dataverse"><span class="toc-section-number">7.3</span> Option 3: OSF + Dataverse</a></li>
+          </ul></li>
+          <li><a href="#cleanup" id="toc-cleanup"><span class="toc-section-number">8</span> Cleanup</a></li>
           </ul>
         </nav>
         <ul class="authors">
@@ -141,32 +170,6 @@
               <section id="content" class="normal">
       
    
-      
-      <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">Example reproducible workflow</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li>
-        <a href="index.html">Home</a>
-      </li>
-      <li>
-        <a href="about.html">About</a>
-      </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container -->
-      </div><!--/.navbar -->
         
       <h1 class="title">Example reproducible workflow</h1>
       
@@ -190,8 +193,9 @@ pre, code {white-space:pre !important; overflow-x:auto}
 <p>Please use the following for citing this document:</p>
 <p>Pither, J., Vis-Dunbar, M. (2024). An example workflow for a reproducible and discoverable research project. <a href="https://pitherj.github.io/example_reproducible_workflow/" class="uri">https://pitherj.github.io/example_reproducible_workflow/</a></p>
 <p>All source files are available at <a href="https://github.com/pitherj/example_reproducible_workflow/tree/main">https://github.com/pitherj/example_reproducible_workflow/tree/main</a></p>
+<hr />
 </div>
-<div id="pre-project-checklist" class="section level1" number="2">
+<div id="preproject" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Pre-project checklist</h1>
 <ul>
 <li><a href="https://happygitwithr.com/install-git">have Git installed on local computer</a></li>
@@ -204,16 +208,270 @@ pre, code {white-space:pre !important; overflow-x:auto}
 <li>(optional) <a href="https://www.zotero.org/support/kb/safari_compatibility">Zotero browser connector activated</a></li>
 <li>(optional) <a href="http://zotfile.com/">Zotfile plugin installed</a></li>
 </ul>
-</div>
-<div id="project-setup" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Project setup</h1>
+<p><strong>Need help?</strong></p>
 <ul>
 <li>Look for relevant <a href="https://csc.ok.ubc.ca/workshops/">workshops at UBCO (R, Git and GitHub, Bash, Copyright…)</a></li>
 <li>Request a lab workshop by emailing the CSC <a href="mailto:csc.ok@ubc.ca" class="email">csc.ok@ubc.ca</a></li>
 </ul>
-<div id="section" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> </h2>
+<hr />
 </div>
+<div id="setup" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Project setup</h1>
+<p>An overview of the workflow ecosystem is provided below, illustrating how the different tools connect to each other.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-with-knitr"></span>
+<img src="more/ecosystem_diagram.png" alt="Workflow ecosystem" width="100%" />
+<p class="caption">
+Figure 3.1: Workflow ecosystem
+</p>
+</div>
+<p>An overview flow-chart of the entire workflow is provided in this <a href="more/full_example_workflow_diagram.pdf">PDF document</a>.</p>
+<hr />
+<div id="rstudio-github" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> RStudio + Github</h2>
+<p>Consult the <a href="https://happygitwithr.com/connect-intro">happygitwithr.com website</a> for these steps.</p>
+<ul>
+<li>create GitHub repository for the project (can optionally be private for now)</li>
+<li>(OPTIONAL) can use <a href="https://workflowr.github.io/workflowr/articles/wflow-09-workshop.html"><code>workflowr</code> package</a> to facilitate following steps</li>
+<li>create new RStudio project, enabling version control by connecting to GitHub repo</li>
+<li>enable <code>renv</code> option to facilitate <a href="https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html">package management</a></li>
+<li>set up an appropriate directory structure, as illustrated below</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="more/example_directory_structure.png" alt="Example project directory structure" width="100%" />
+<p class="caption">
+Figure 3.2: Example project directory structure
+</p>
+</div>
+<ul>
+<li>initialize a _README.md file for root- and each sub-directory (can be fleshed out later)</li>
+<li>use the <a href="https://usethis.r-lib.org/index.html"><code>usethis</code> R package</a> and its <code>edit_git_ignore</code> function to create a <code>.gitignore</code> file and populate it with text from this <a href="https://github.com/github/gitignore/blob/main/R.gitignore">template</a>.</li>
+<li><strong>NOTE</strong> Make sure you ignore all sensitive and copyrighted files, and it’s recommended to ignore data files; for example, you could add “rawdata/” to your .gitignore file to ignore everything in that directory.</li>
+</ul>
+<hr />
+</div>
+<div id="osf" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> OSF</h2>
+<p>Find out about the functionality of the <a href="https://help.osf.io/?_gl=1*lewbss*_ga*MzMzMjg1Nzg1LjE3MDQ4MzkwOTQ.*_ga_YE9BMGGWX8*MTcwNzI0NTM4OS4yNS4xLjE3MDcyNDY5MzQuNTkuMC4w">OSF platform here</a>.</p>
+<p>UBC subscribes to <a href="https://guides.library.ubc.ca/OSF">OSF Institutions</a>, which allows UBC students, staff, and faculty to <a href="https://guides.library.ubc.ca/osf">log in to OSF with their CWL credentials</a>.</p>
+<p>You can explore other UBC-affiliated OSF projects <a href="https://osf.io/institutions/ubc">here</a>.</p>
+<ul>
+<li>create new OSF project (or component on existing project) for managing this project, materials and for serving as a central “hub” for all project components (e.g. github, google drive etc…)</li>
+<li>optionally organize your project (with subcomponents) such that one of the components (even the main project) could eventually serve as the archive site for your project; <strong>NOTE</strong> this is especially useful if you wish to be able to provide an anonymized link to your study materials during the manuscript review process</li>
+<li>bookmark the project website in your browser</li>
+<li>include all collaborators as contributors, order names appropriately, tailor their permissions</li>
+<li>provide useful keywords/tags to enhance discoverability</li>
+<li>edit the “metadata” entries appropriately</li>
+<li>include an informative project description on home Wiki page</li>
+<li>create other Wiki pages e.g. to provide estimated project timeline, extra information etc…</li>
+<li>your OSF project can be linked to pre-registration when it is submitted (see below)</li>
+<li>optionally connect <a href="https://help.osf.io/article/377-add-ons-api-home-page">“add-ons” to OSF</a> such as Zotero and Github</li>
+</ul>
+<hr />
+</div>
+<div id="zotero" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Zotero</h2>
+<ul>
+<li>create a Zotero library (or <a href="https://www.zotero.org/groups/">shared group library</a> if collaborating) NOTE: store attachments (PDFs) on LOCAL or OneDrive (not on Zotero cloud)</li>
+<li>use add-ons such as Zotfile and <a href="https://github.com/windingwind/zotero-better-notes">Zotero better-notes</a> to manage citations and notes</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="prereg" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Pre-registration</h1>
+<p>Pre-registering a study is one of the most effective ways to improve the rigour and reliability of research. Feel free to consult the following articles for background:</p>
+<p>Hardwicke, T.E. &amp; Wagenmakers, E.-J. (2023). Reducing bias, increasing transparency and calibrating confidence with preregistration. Nat Hum Behav, 7, 15–26. <a href="https://doi.org/10.1038/s41562-022-01497-2">https://doi.org/10.1038/s41562-022-01497-2</a>
+Nosek, B.A., Beck, E.D., Campbell, L., Flake, J.K., Hardwicke, T.E., Mellor, D.T., et al. (2019). Preregistration Is Hard, And Worthwhile. Trends in Cognitive Sciences, 23, 815–818. <a href="https://doi.org/10.1016/j.tics.2019.07.009">https://doi.org/10.1016/j.tics.2019.07.009</a>
+Nosek, B.A., Ebersole, C.R., DeHaven, A.C. &amp; Mellor, D.T. (2018). The preregistration revolution. Proc. Natl. Acad. Sci. U.S.A., 115, 2600–2606. <a href="https://doi.org/10.1073/pnas.1708274114">https://doi.org/10.1073/pnas.1708274114</a></p>
+<hr />
+<div id="part-i-preparation" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Part-I: Preparation</h2>
+<ul>
+<li>Consult the <a href="https://help.osf.io/article/330-welcome-to-registrations">OSF registration page</a> to learn about pre-registrations.</li>
+<li>Book an appointment with a <a href="https://csc.ok.ubc.ca/consultations/research-data-consultation/">UBC Okanagan Research Data Consultant</a></li>
+<li>Consult with <a href="https://library.ok.ubc.ca/about/contact/mathew-vis-dunbar/">a UBC subject librarian</a> for literature searching and licencing considerations</li>
+<li>Consult this <a href="https://ubc-library-rc.github.io/rdm/">UBC website for an introduction to research data management</a></li>
+</ul>
+<hr />
+</div>
+<div id="part-ii.i-optional-analysis-to-inform-study-design" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Part-II.i: (OPTIONAL): Analysis to inform study-design</h2>
+<ul>
+<li>create annotated R Markdown script that walks through the process of <a href="https://stirlingcodingclub.github.io/simulating_data/index.html">generating simulated data</a> for the purpose of working out the study design and analysis plan</li>
+<li>can use data from previous research to inform data generation</li>
+<li><a href="https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/">simulate data for power analysis</a> to inform study design</li>
+<li>your finalized analysis plan, with example code for simulated data, can be linked in pre-registration (either through GitHub, or via HTML or PDF file)</li>
+</ul>
+<hr />
+</div>
+<div id="part-ii.ii-data-management-plan" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Part-II.ii: Data Management Plan</h2>
+<ul>
+<li>once you’ve thought carefully about study design and data, consult these <a href="https://ubc-library-rc.github.io/rdm/content/06_Data_Management_Plan.html">UBC guidelines</a> on creating a Data Management Plan (DMP).</li>
+<li>be sure to plan and employ proper protocols for sensitive data.</li>
+<li>store this DMP in your OSF project</li>
+</ul>
+<hr />
+</div>
+<div id="part-iii-submission" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Part-III: Submission</h2>
+<ul>
+<li>complete &amp; submit <a href="https://help.osf.io/article/345-create-registrations">OSF pre-registration</a> &amp; optionally link to OSF project</li>
+<li>optionally include knitted document showing power analysis etc…</li>
+<li>the pre-registration can be kept private for a time period, and this is recommended if you wish to retain anonymity during review process; - you can create an anonymized link to the pre-registration for use during review process</li>
+<li>bookmark the registration in your browser (it will have a DOI)</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="analysis" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Analysis &amp; Writing</h1>
+<p>You can optionally write your manuscript in markdown (e.g. using the RStudio editor), in which case you can take advantage of version control that you already have set up in your RStudio project.</p>
+<p>If you choose to do this, you can also (optinally) install and use:<br />
+- the <a href="https://pkgs.rstudio.com/rticles/articles/rticles.html"><code>rticles</code> R package</a> to write manuscripts using journal markdown templates within a markdown editor (including RStudio)
+- the <a href="https://cran.r-project.org/web/packages/trackdown/vignettes/trackdown-workflow.html"><code>trackdown</code> package</a> for collaborative editing of your markdown manuscript via Google docs.
+- use citation tools within the RStudio editor (Zotero is embedded in RStudio under the <a href="https://rstudio.github.io/visual-markdown-editing/citations.html">“Visual” editing mode</a>)</p>
+<p>If you opt to write your manuscript using a word-processing software (e.g. Word), then:
+- frequently (e.g. daily) upload your working (binary file) document to OSF to ensure backup and versioning
+- use a Zotero plugin to facilitation citation management
+- use the <a href="https://help.osf.io/article/280-checkout-files">“check-out / check-in” function on OSF</a> to manage collaborative editing</p>
+<hr />
+<div id="rstudio-github-1" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> RStudio + Github</h2>
+<ul>
+<li><a href="https://docs.posit.co/ide/user/ide/guide/tools/version-control.html#integrations">frequent and regular versioning (commit/push/pull)</a> of coding &amp; markdown authoring work to GitHub</li>
+<li><strong>REMEMBER</strong>: ensure that only non-sensitive data and those with acceptable license get pushed to GitHub</li>
+<li>any sensitive data only store locally, backed up on private OSF component</li>
+<li>beware of storage limitations on <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage">GitHub</a> &amp; <a href="https://help.osf.io/article/386-project-storage">OSF</a></li>
+<li>keep the “renv” lock file up to date for <a href="https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html">package management</a></li>
+</ul>
+<hr />
+</div>
+<div id="osf-1" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> OSF</h2>
+<p>In your day-to-day work, which involves regular backing up of files/data (some of which are not suitable for Github, and are better stored on OSF), you can optionally make use of the <a href="https://github.com/ropensci/osfr"><code>osfr</code> package</a> to interact with OSF project, including uploading files.</p>
+<ul>
+<li>frequent regular backup / versioning of binary files (e.g. Word docs)</li>
+<li>use Wiki pages to provide progress updates (e.g. on a timeline Wiki)</li>
+<li>use other Wiki pages for updating any other relevant details</li>
+<li>use as location for backup storage of data</li>
+</ul>
+<hr />
+</div>
+<div id="zotero-1" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Zotero</h2>
+<ul>
+<li>make use of the handy <a href="https://github.com/windingwind/zotero-better-notes">Zotero better-notes</a> to manage notes for your citations</li>
+<li>keep Zotero library up to date and clean regularly</li>
+<li>use the RStudio Visual Editor to <a href="https://rstudio.github.io/visual-markdown-editing/citations.html">insert citations from your Zotero library</a></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="dissemination" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Dissemination</h1>
+<blockquote>
+<p>If you wish to remain anonymous for any part of the manuscript submission/review stage, then you must go through all your files to ensure that you’ve removed any information that could identify you and/or co-authors. Do not submit a pre-print if you wish to remain anonymous. Currently there are no pre-print servers that enable posting of anonymized preprints.</p>
+</blockquote>
+<hr />
+<div id="rstudio-github-2" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> RStudio + Github</h2>
+<ul>
+<li>knit the manuscript to PDF (journal may have a direct markdown submission option)</li>
+<li>ensure it rendered correctly, including symbols, figures, formatting, citations etc..</li>
+<li>double-check / update <code>_DATA-DICTIONARY.md</code> file for both rawdata and outdata directories and ensure <code>_README.md</code> files in root and rawdata directories up to date and correct.</li>
+<li>create a “zip” file of all contents of your project directory and sub-directories. Example code for this that you can type in your RStudio command console (assuming you don’t need to exclude any sensitive files or data):</li>
+</ul>
+<pre><code>zip(&quot;myproject.zip&quot;, dir(full.names = TRUE, recursive = TRUE))</code></pre>
+<hr />
+</div>
+<div id="osf-2" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> OSF</h2>
+<ul>
+<li>clean up
+create new OSF private project that will eventually serve as the public project archive</li>
+<li>add all the relevant information as described in “Project Setup”
+<ul>
+<li>metadata, wiki pages, etc… (but don’t put info in wiki pages that could be used to identify authors)</li>
+</ul></li>
+<li>copy all directories and files, including the “zip” file (excluding any sensitive data) from local RStudio project folder (repo) into the main OSF project storage (this makes it easier for someone to download materials).</li>
+<li>in the OSF project settings, create a “view only” link, and select option to anonymize</li>
+<li>this link is what you’ll provide with manuscript submission to journal</li>
+<li>use a different browser to double-check anonymity of OSF project</li>
+<li>ideally, have colleague independently double-check project reproducibility from OSF materials</li>
+</ul>
+<hr />
+</div>
+<div id="manuscript-submission" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Manuscript submission</h2>
+<ul>
+<li>be sure to state that the study was pre-registered, and provide the link (DOI) to the pre-registration</li>
+<li>explain any deviations from pre-registered plans</li>
+<li><strong>if you are NOT concerned with anonymity</strong>, optionally submit a preprint to a preprint server like <a href="https://ecoevorxiv.org/">EcoEvoRxiv</a> or <a href="https://osf.io/preprints">OSF Preprints</a></li>
+<li>consider submitting your manuscript to an <a href="https://scholcomm.ubc.ca/open-access/">open access</a></li>
+<li>regardless, ensure you can post a penultimate version of your manuscript for free, public access</li>
+</ul>
+<hr />
+</div>
+<div id="manuscript-revisions" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Manuscript revisions</h2>
+<ul>
+<li>complete revisions using versioning as usual (either via Github of writing using markdown, or OSF if not)</li>
+<li>update all project materials accordingly</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="archiving" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Project archiving</h1>
+<p>Once your manuscript has been accepted for publication, make final preparations for archiving all relevant materials to ensure reproducibility and discoverability.</p>
+<div id="option-1-osf" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Option 1: OSF</h2>
+<p>Examples of archives on OSF are provided <a href="https://osf.io/jfy35/">here</a> and <a href="https://osf.io/ujnw2/">here</a>.</p>
+<ul>
+<li>if you designed your original OSF project such that it (or a component) could serve as the archive, then proceed by making the OSF archive project public</li>
+<li>note it will create a permanent DOI for this public archive</li>
+<li>choose appropriate copyright license; unsure? Consult with <a href="https://library.ok.ubc.ca/about/contact/mathew-vis-dunbar/">subject librarian for literature searching and licencing considerations</a></li>
+<li>ensure contributor (author) order on the archive is appropriate for the work done on the archived materials, e.g. scripts / data (not the main manuscript itself)</li>
+<li>include a clear statement illustrating how the archive should be cited; <strong>NOTE</strong>: this archive should have its own unique citation (separate from main paper)</li>
+<li>ensure all the metadata are complete</li>
+<li>use “READ ME FIRST” as the heading at the top of the main wiki page, like in <a href="https://osf.io/ujnw2/">this example</a>, then include in that wiki page all information and instructions relevant for reproducibility, including:
+<ul>
+<li>include a link / DOI to published paper</li>
+<li>include a link to GitHub repo (or alternatively, connect your Github repo using the <a href="https://help.osf.io/article/377-add-ons-api-home-page">add-on feature</a>)</li>
+<li>describe any data that may not be included in archive e.g. due to sensitive nature etc…</li>
+<li>optionally enrich the home wiki page content with e.g. links to video abstracts, media interviews, etc…</li>
+<li>provide a link to the public Zotero library associated with paper</li>
+</ul></li>
+<li>ensure all project archive components are view/read only</li>
+<li>maximize discoverability with useful tags</li>
+<li>use <a href="https://help.osf.io/article/289-view-project-analytics">OSF analytics</a> to track site visits and downloads</li>
+<li>optionally link the Zotero library to the archive, so that viewers can link directly to cited papers (whose DOI links appear in add-on)</li>
+<li>bookmark this archive in your browser</li>
+</ul>
+<hr />
+</div>
+<div id="option-2-borealis-dataverse" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Option 2: Borealis Dataverse</h2>
+<p>Examples of archives on UBC’s Dataverse (TBD).</p>
+<p>Instructions for archiving materials on UBC’s Dataverse are provided <a href="https://ubc-library-rc.github.io/rdm/content/05_Deposit_to_Dataverse.html">here</a>.</p>
+<p>Note that you can <a href="https://borealisdata.ca/guides/en/latest/admin/integrations.html#github">connect your Github repository to the Dataverse archive</a>.</p>
+<hr />
+</div>
+<div id="option-3-osf-dataverse" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Option 3: OSF + Dataverse</h2>
+<p>For an example of a blended approach, here’s a <a href="https://osf.io/jfy35/">main archive is on OSF</a>, and for the purpose of ensuring institutional affiliation and memory, a skeleton archive containing only metadata is available on UBC’s <a href="https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/I6BHSX">Dataverse</a>.</p>
+<hr />
+</div>
+</div>
+<div id="cleanup" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Cleanup</h1>
+<ul>
+<li>remove any unnecessary files/components from your OSF projects</li>
+<li>make sure all URL links are working</li>
+<li>in the home Wiki page of the hub project, put a clear statement of project status near top (e.g. indicating the project has wrapped up, with date)</li>
+<li>sign out of OSF and double check that only those files/components that should be publicly visible are</li>
+</ul>
 </div>
 
    
