@@ -243,7 +243,7 @@ Figure 3.2: Example project directory structure
 </p>
 </div>
 <ul>
-<li>while any number of directory structures are suitable, the key feature is ensuring the <code>rawdata</code> folder holds only raw data, and ideally is write-protected once all data have been acquired. Once you’re sure you’ve acquired all your raw data, here is how you can achieve this on a Mac / Unix / Linux based computer:</li>
+<li>while any number of directory structures are suitable, the key feature is ensuring the <code>rawdata</code> folder holds only raw data, and ideally is write-protected (read-only) once all data have been acquired. Once you’re sure you’ve acquired all your raw data, here is how you can achieve this on a Mac / Unix / Linux based computer:</li>
 </ul>
 <p>Click on the “terminal” tab in your RStudio console window, and type the following command (assuming your raw data directory name is “rawdata”):</p>
 <pre><code>chmod a=r rawdata</code></pre>
