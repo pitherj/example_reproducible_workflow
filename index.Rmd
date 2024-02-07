@@ -25,11 +25,11 @@ pre, code {white-space:pre !important; overflow-x:auto}
 
 This website is geared towards researchers with limited experience in open science practices.
 
-It provides step-by-step pointers on how to ensure your research project is reproducible, discoverable, and appropriately archived. 
+It provides step-by-step pointers on how to ensure a research project is reproducible, discoverable, and appropriately archived. 
 
-The guidelines provided here make use of tools that we have found useful, and for which we've identified helpful resources: R/RStudio, Git/Github, OSF, and Zotero. However, other tools can be used to equal effect for achieving the overall goal of reproducibility. 
+The guidelines provided here make use of tools that we have found useful, and for which we've identified helpful online resources: R/RStudio, Git/Github, OSF, and Zotero. However, other tools can be used to equal effect for achieving the overall goal of reproducibility. 
 
-The website is meant to be succinct, and used as a form of checklist. Each step/point links out to useful guidelines/resources about that step. Where available, it provides resources from the University of British Columbia, the authors’ home institution.
+The website is meant to be succinct, and used as a form of checklist. Each step/point links out to guidelines/resources about that step. Where available, it provides resources from the University of British Columbia, the authors’ home institution.
 
 This work is lisenced under the [Creative Commons Attribution-Non Commercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
@@ -88,7 +88,15 @@ Consult the [happygitwithr.com website](https://happygitwithr.com/connect-intro)
 knitr::include_graphics("more/example_directory_structure.png")
 ```
 
-- initialize a _README.md file for root- and each sub-directory (can be fleshed out later)
+- while any number of directory structures are suitable, the key feature is ensuring the `rawdata` folder holds only raw data, and ideally is write-protected once all data have been acquired.  Once you're sure you've acquired all your raw data, here is how you can achieve this on a Mac / Unix / Linux based computer:
+
+Click on the "terminal" tab in your RStudio console window, and type the following command (assuming your raw data directory name is "rawdata"):
+
+```
+chmod a=r rawdata
+```
+
+- initialize a `_README.md` file for root- and each sub-directory (can be fleshed out later)
 - use the [`usethis` R package](https://usethis.r-lib.org/index.html) and its `edit_git_ignore` function to create a `.gitignore` file and populate it with text from this [template](https://github.com/github/gitignore/blob/main/R.gitignore).
 - **NOTE** Make sure you ignore all sensitive and copyrighted files, and it’s recommended to ignore data files; for example, you could add “rawdata/” to your .gitignore file to ignore everything in that directory.
 
@@ -103,7 +111,8 @@ UBC subscribes to [OSF Institutions](https://guides.library.ubc.ca/OSF), which a
 You can explore other UBC-affiliated OSF projects [here](https://osf.io/institutions/ubc).  
 
 - create new OSF project (or component on existing project) for managing this project, materials and for serving as a central “hub” for all project components (e.g. github, google drive etc...)
-- optionally organize your project (with subcomponents) such that one of the components (even the main project) could eventually serve as the archive site for your project; **NOTE** this is especially useful if you wish to be able to provide an anonymized link to your study materials during the manuscript review process 
+- optionally organize your project (with subcomponents) such that one of the components (even the main project) could eventually serve as the archive site for your project;  
+**NOTE** this is especially useful if you wish to be able to provide an anonymized link to your study materials during the manuscript review process 
 - bookmark the project website in your browser
 - include all collaborators as contributors, order names appropriately, tailor their permissions
 - provide useful keywords/tags to enhance discoverability
@@ -126,9 +135,10 @@ You can explore other UBC-affiliated OSF projects [here](https://osf.io/institut
 
 Pre-registering a study is one of the most effective ways to improve the rigour and reliability of research. Feel free to consult the following articles for background: 
 
-Hardwicke, T.E. & Wagenmakers, E.-J. (2023). Reducing bias, increasing transparency and calibrating confidence with preregistration. Nat Hum Behav, 7, 15–26. [https://doi.org/10.1038/s41562-022-01497-2](https://doi.org/10.1038/s41562-022-01497-2)
-Nosek, B.A., Beck, E.D., Campbell, L., Flake, J.K., Hardwicke, T.E., Mellor, D.T., et al. (2019). Preregistration Is Hard, And Worthwhile. Trends in Cognitive Sciences, 23, 815–818. [https://doi.org/10.1016/j.tics.2019.07.009](https://doi.org/10.1016/j.tics.2019.07.009)
-Nosek, B.A., Ebersole, C.R., DeHaven, A.C. & Mellor, D.T. (2018). The preregistration revolution. Proc. Natl. Acad. Sci. U.S.A., 115, 2600–2606. [https://doi.org/10.1073/pnas.1708274114](https://doi.org/10.1073/pnas.1708274114)
+Hardwicke, T.E. & Wagenmakers, E.-J. (2023). Reducing bias, increasing transparency and calibrating confidence with preregistration. Nat Hum Behav, 7, 15–26. [https://doi.org/10.1038/s41562-022-01497-2](https://doi.org/10.1038/s41562-022-01497-2). 
+Nosek, B.A., Beck, E.D., Campbell, L., Flake, J.K., Hardwicke, T.E., Mellor, D.T., et al. (2019). Preregistration Is Hard, And Worthwhile. Trends in Cognitive Sciences, 23, 815–818. [https://doi.org/10.1016/j.tics.2019.07.009](https://doi.org/10.1016/j.tics.2019.07.009). 
+Nosek, B.A., Ebersole, C.R., DeHaven, A.C. & Mellor, D.T. (2018). The preregistration revolution. Proc. Natl. Acad. Sci. U.S.A., 115, 2600–2606. [https://doi.org/10.1073/pnas.1708274114](https://doi.org/10.1073/pnas.1708274114).  
+
 
 ***
 
@@ -172,14 +182,14 @@ Nosek, B.A., Ebersole, C.R., DeHaven, A.C. & Mellor, D.T. (2018). The preregistr
 You can optionally write your manuscript in markdown (e.g. using the RStudio editor), in which case you can take advantage of version control that you already have set up in your RStudio project.  
 
 If you choose to do this, you can also (optinally) install and use:  
-  - the [`rticles` R package](https://pkgs.rstudio.com/rticles/articles/rticles.html) to write manuscripts using journal markdown templates within a markdown editor (including RStudio) 
-  - the [`trackdown` package](https://cran.r-project.org/web/packages/trackdown/vignettes/trackdown-workflow.html) for collaborative editing of your markdown manuscript via Google docs. 
-  - use citation tools within the RStudio editor (Zotero is embedded in RStudio under the [“Visual” editing mode](https://rstudio.github.io/visual-markdown-editing/citations.html))
+- the [`rticles` R package](https://pkgs.rstudio.com/rticles/articles/rticles.html) to write manuscripts using journal markdown templates within a markdown editor (including RStudio)  
+- the [`trackdown` package](https://cran.r-project.org/web/packages/trackdown/vignettes/trackdown-workflow.html) for collaborative editing of your markdown manuscript via Google docs.  
+- use citation tools within the RStudio editor (Zotero is embedded in RStudio under the [“Visual” editing mode](https://rstudio.github.io/visual-markdown-editing/citations.html)).  
 
-If you opt to write your manuscript using a word-processing software (e.g. Word), then: 
-  - frequently (e.g. daily) upload your working (binary file) document to OSF to ensure backup and versioning
-  - use a Zotero plugin to facilitation citation management 
-  - use the ["check-out / check-in" function on OSF](https://help.osf.io/article/280-checkout-files) to manage collaborative editing
+If you opt to write your manuscript using a word-processing software (e.g. Word), then:   
+- frequently (e.g. daily) upload your working (binary file) document to OSF to ensure backup and versioning. 
+- use a Zotero plugin to facilitation citation management   
+- use the ["check-out / check-in" function on OSF](https://help.osf.io/article/280-checkout-files) to manage collaborative editing. 
 
 ***
 

@@ -7,7 +7,7 @@
 
         <meta name="author" content="Jason" />
     
-        <meta name="date" content="2024-02-06" />
+        <meta name="date" content="2024-02-07" />
     
     <title>Example reproducible workflow</title>
 
@@ -19,7 +19,7 @@
         <link href="site_libs/robobook-0.1/robobook.css" rel="stylesheet" />
         <link href="site_libs/robobook-0.1/robobook_fonts_embed.css" rel="stylesheet" />
         <script src="site_libs/robobook-0.1/robobook.js"></script>
-        <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+        <script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
         <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
         <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
     
@@ -158,7 +158,7 @@
         <ul class="authors">
           <li class="divider"></li>
                                 <li><span><i class="glyphicon glyphicon-user"></i> Jason</span></li>
-                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 2024-02-06</span></li>
+                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 2024-02-07</span></li>
                   </ul>     
       </div>
       <div class="book-body fixed">
@@ -185,9 +185,9 @@ pre, code {white-space:pre !important; overflow-x:auto}
 <div id="welcome" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Welcome</h1>
 <p>This website is geared towards researchers with limited experience in open science practices.</p>
-<p>It provides step-by-step pointers on how to ensure your research project is reproducible, discoverable, and appropriately archived.</p>
-<p>The guidelines provided here make use of tools that we have found useful, and for which we’ve identified helpful resources: R/RStudio, Git/Github, OSF, and Zotero. However, other tools can be used to equal effect for achieving the overall goal of reproducibility.</p>
-<p>The website is meant to be succinct, and used as a form of checklist. Each step/point links out to useful guidelines/resources about that step. Where available, it provides resources from the University of British Columbia, the authors’ home institution.</p>
+<p>It provides step-by-step pointers on how to ensure a research project is reproducible, discoverable, and appropriately archived.</p>
+<p>The guidelines provided here make use of tools that we have found useful, and for which we’ve identified helpful online resources: R/RStudio, Git/Github, OSF, and Zotero. However, other tools can be used to equal effect for achieving the overall goal of reproducibility.</p>
+<p>The website is meant to be succinct, and used as a form of checklist. Each step/point links out to guidelines/resources about that step. Where available, it provides resources from the University of British Columbia, the authors’ home institution.</p>
 <p>This work is lisenced under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-Non Commercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a>.</p>
 <p><strong>Citation</strong></p>
 <p>Please use the following for citing this document:</p>
@@ -243,7 +243,12 @@ Figure 3.2: Example project directory structure
 </p>
 </div>
 <ul>
-<li>initialize a _README.md file for root- and each sub-directory (can be fleshed out later)</li>
+<li>while any number of directory structures are suitable, the key feature is ensuring the <code>rawdata</code> folder holds only raw data, and ideally is write-protected once all data have been acquired. Once you’re sure you’ve acquired all your raw data, here is how you can achieve this on a Mac / Unix / Linux based computer:</li>
+</ul>
+<p>Click on the “terminal” tab in your RStudio console window, and type the following command (assuming your raw data directory name is “rawdata”):</p>
+<pre><code>chmod a=r rawdata</code></pre>
+<ul>
+<li>initialize a <code>_README.md</code> file for root- and each sub-directory (can be fleshed out later)</li>
 <li>use the <a href="https://usethis.r-lib.org/index.html"><code>usethis</code> R package</a> and its <code>edit_git_ignore</code> function to create a <code>.gitignore</code> file and populate it with text from this <a href="https://github.com/github/gitignore/blob/main/R.gitignore">template</a>.</li>
 <li><strong>NOTE</strong> Make sure you ignore all sensitive and copyrighted files, and it’s recommended to ignore data files; for example, you could add “rawdata/” to your .gitignore file to ignore everything in that directory.</li>
 </ul>
@@ -256,7 +261,8 @@ Figure 3.2: Example project directory structure
 <p>You can explore other UBC-affiliated OSF projects <a href="https://osf.io/institutions/ubc">here</a>.</p>
 <ul>
 <li>create new OSF project (or component on existing project) for managing this project, materials and for serving as a central “hub” for all project components (e.g. github, google drive etc…)</li>
-<li>optionally organize your project (with subcomponents) such that one of the components (even the main project) could eventually serve as the archive site for your project; <strong>NOTE</strong> this is especially useful if you wish to be able to provide an anonymized link to your study materials during the manuscript review process</li>
+<li>optionally organize your project (with subcomponents) such that one of the components (even the main project) could eventually serve as the archive site for your project;<br />
+<strong>NOTE</strong> this is especially useful if you wish to be able to provide an anonymized link to your study materials during the manuscript review process</li>
 <li>bookmark the project website in your browser</li>
 <li>include all collaborators as contributors, order names appropriately, tailor their permissions</li>
 <li>provide useful keywords/tags to enhance discoverability</li>
@@ -280,9 +286,9 @@ Figure 3.2: Example project directory structure
 <div id="prereg" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Pre-registration</h1>
 <p>Pre-registering a study is one of the most effective ways to improve the rigour and reliability of research. Feel free to consult the following articles for background:</p>
-<p>Hardwicke, T.E. &amp; Wagenmakers, E.-J. (2023). Reducing bias, increasing transparency and calibrating confidence with preregistration. Nat Hum Behav, 7, 15–26. <a href="https://doi.org/10.1038/s41562-022-01497-2">https://doi.org/10.1038/s41562-022-01497-2</a>
-Nosek, B.A., Beck, E.D., Campbell, L., Flake, J.K., Hardwicke, T.E., Mellor, D.T., et al. (2019). Preregistration Is Hard, And Worthwhile. Trends in Cognitive Sciences, 23, 815–818. <a href="https://doi.org/10.1016/j.tics.2019.07.009">https://doi.org/10.1016/j.tics.2019.07.009</a>
-Nosek, B.A., Ebersole, C.R., DeHaven, A.C. &amp; Mellor, D.T. (2018). The preregistration revolution. Proc. Natl. Acad. Sci. U.S.A., 115, 2600–2606. <a href="https://doi.org/10.1073/pnas.1708274114">https://doi.org/10.1073/pnas.1708274114</a></p>
+<p>Hardwicke, T.E. &amp; Wagenmakers, E.-J. (2023). Reducing bias, increasing transparency and calibrating confidence with preregistration. Nat Hum Behav, 7, 15–26. <a href="https://doi.org/10.1038/s41562-022-01497-2">https://doi.org/10.1038/s41562-022-01497-2</a>.
+Nosek, B.A., Beck, E.D., Campbell, L., Flake, J.K., Hardwicke, T.E., Mellor, D.T., et al. (2019). Preregistration Is Hard, And Worthwhile. Trends in Cognitive Sciences, 23, 815–818. <a href="https://doi.org/10.1016/j.tics.2019.07.009">https://doi.org/10.1016/j.tics.2019.07.009</a>.
+Nosek, B.A., Ebersole, C.R., DeHaven, A.C. &amp; Mellor, D.T. (2018). The preregistration revolution. Proc. Natl. Acad. Sci. U.S.A., 115, 2600–2606. <a href="https://doi.org/10.1073/pnas.1708274114">https://doi.org/10.1073/pnas.1708274114</a>.</p>
 <hr />
 <div id="part-i-preparation" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Part-I: Preparation</h2>
@@ -328,13 +334,13 @@ Nosek, B.A., Ebersole, C.R., DeHaven, A.C. &amp; Mellor, D.T. (2018). The prereg
 <h1><span class="header-section-number">5</span> Analysis &amp; Writing</h1>
 <p>You can optionally write your manuscript in markdown (e.g. using the RStudio editor), in which case you can take advantage of version control that you already have set up in your RStudio project.</p>
 <p>If you choose to do this, you can also (optinally) install and use:<br />
-- the <a href="https://pkgs.rstudio.com/rticles/articles/rticles.html"><code>rticles</code> R package</a> to write manuscripts using journal markdown templates within a markdown editor (including RStudio)
-- the <a href="https://cran.r-project.org/web/packages/trackdown/vignettes/trackdown-workflow.html"><code>trackdown</code> package</a> for collaborative editing of your markdown manuscript via Google docs.
-- use citation tools within the RStudio editor (Zotero is embedded in RStudio under the <a href="https://rstudio.github.io/visual-markdown-editing/citations.html">“Visual” editing mode</a>)</p>
-<p>If you opt to write your manuscript using a word-processing software (e.g. Word), then:
-- frequently (e.g. daily) upload your working (binary file) document to OSF to ensure backup and versioning
-- use a Zotero plugin to facilitation citation management
-- use the <a href="https://help.osf.io/article/280-checkout-files">“check-out / check-in” function on OSF</a> to manage collaborative editing</p>
+- the <a href="https://pkgs.rstudio.com/rticles/articles/rticles.html"><code>rticles</code> R package</a> to write manuscripts using journal markdown templates within a markdown editor (including RStudio)<br />
+- the <a href="https://cran.r-project.org/web/packages/trackdown/vignettes/trackdown-workflow.html"><code>trackdown</code> package</a> for collaborative editing of your markdown manuscript via Google docs.<br />
+- use citation tools within the RStudio editor (Zotero is embedded in RStudio under the <a href="https://rstudio.github.io/visual-markdown-editing/citations.html">“Visual” editing mode</a>).</p>
+<p>If you opt to write your manuscript using a word-processing software (e.g. Word), then:<br />
+- frequently (e.g. daily) upload your working (binary file) document to OSF to ensure backup and versioning.
+- use a Zotero plugin to facilitation citation management<br />
+- use the <a href="https://help.osf.io/article/280-checkout-files">“check-out / check-in” function on OSF</a> to manage collaborative editing.</p>
 <hr />
 <div id="rstudio-github-1" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> RStudio + Github</h2>
