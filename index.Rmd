@@ -306,7 +306,7 @@ Examples of archives on OSF are provided [here](https://osf.io/jfy35/) and [here
 
 ## Option 2: Borealis Dataverse
 
-Examples of archives on UBC's Dataverse (TBD).  
+Examples of archives on UBC's Dataverse are [here](https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/KWJTFU) and [here](here).  
 
 Instructions for archiving materials on UBC's Dataverse are provided [here](https://ubc-library-rc.github.io/rdm/content/05_Deposit_to_Dataverse.html).  
 
