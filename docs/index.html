@@ -229,13 +229,14 @@ Figure 3.1: Workflow ecosystem
 <hr />
 <div id="rstudio-github" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> RStudio + Github</h2>
-<p>Consult the <a href="https://happygitwithr.com/connect-intro">happygitwithr.com website</a> for these steps.</p>
+<p>Before going further, be sure to read through this <a href="https://ubc-library-rc.github.io/rdm/">UBC website</a> that provides guidelines on file naming, file formats, directory structures, and <code>readme</code> files.</p>
+<p>For help with the following steps, consult the <a href="https://happygitwithr.com/connect-intro">happygitwithr.com website</a>.</p>
 <ul>
 <li>create GitHub repository for the project (can optionally be private for now)</li>
 <li>(OPTIONAL) can use <a href="https://workflowr.github.io/workflowr/articles/wflow-09-workshop.html"><code>workflowr</code> package</a> to facilitate following steps</li>
 <li>create new RStudio project, enabling version control by connecting to GitHub repo</li>
 <li>enable <code>renv</code> option to facilitate <a href="https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html">package management</a></li>
-<li>set up an appropriate directory structure, as illustrated below</li>
+<li>set up an appropriate directory structure, as illustrated in the example below</li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
 <img src="more/example_directory_structure.png" alt="Example project directory structure" width="100%" />
@@ -249,7 +250,7 @@ Figure 3.2: Example project directory structure
 <p>Click on the “terminal” tab in your RStudio console window, and type the following command (assuming your raw data directory name is “rawdata”):</p>
 <pre><code>chmod a=r rawdata</code></pre>
 <ul>
-<li>initialize a <code>_README.md</code> file for root- and each sub-directory (can be fleshed out later)</li>
+<li>initialize a <code>_README.md</code> or <code>_README.txt</code> file for root- and each sub-directory (can be fleshed out later)</li>
 <li>use the <a href="https://usethis.r-lib.org/index.html"><code>usethis</code> R package</a> and its <code>edit_git_ignore</code> function to create a <code>.gitignore</code> file and populate it with text from this <a href="https://github.com/github/gitignore/blob/main/R.gitignore">template</a>.</li>
 <li><strong>NOTE</strong> Make sure you ignore all sensitive and copyrighted files, and it’s recommended to ignore data files; for example, you could add “rawdata/” to your .gitignore file to ignore everything in that directory.</li>
 </ul>

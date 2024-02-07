@@ -77,13 +77,15 @@ An overview flow-chart of the entire workflow is provided in this [PDF document]
 
 ## RStudio + Github
 
-Consult the [happygitwithr.com website](https://happygitwithr.com/connect-intro) for these steps.
+Before going further, be sure to read through this [UBC website](https://ubc-library-rc.github.io/rdm/) that provides guidelines on file naming, file formats, directory structures, and `readme` files. 
+
+For help with the following steps, consult the [happygitwithr.com website](https://happygitwithr.com/connect-intro).
 
 - create GitHub repository for the project (can optionally be private for now)
 - (OPTIONAL) can use [`workflowr` package](https://workflowr.github.io/workflowr/articles/wflow-09-workshop.html) to facilitate following steps
 - create new RStudio project, enabling version control by connecting to GitHub repo
 - enable `renv` option to facilitate [package management](https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html)
-- set up an appropriate directory structure, as illustrated below
+- set up an appropriate directory structure, as illustrated in the example below
 
 ```{r, echo=FALSE, fig.align='center', out.width='100%', fig.cap='Example project directory structure'}
 knitr::include_graphics("more/example_directory_structure.png")
@@ -97,7 +99,7 @@ Click on the "terminal" tab in your RStudio console window, and type the followi
 chmod a=r rawdata
 ```
 
-- initialize a `_README.md` file for root- and each sub-directory (can be fleshed out later)
+- initialize a `_README.md` or `_README.txt` file for root- and each sub-directory (can be fleshed out later)
 - use the [`usethis` R package](https://usethis.r-lib.org/index.html) and its `edit_git_ignore` function to create a `.gitignore` file and populate it with text from this [template](https://github.com/github/gitignore/blob/main/R.gitignore).
 - **NOTE** Make sure you ignore all sensitive and copyrighted files, and it’s recommended to ignore data files; for example, you could add “rawdata/” to your .gitignore file to ignore everything in that directory.
 
