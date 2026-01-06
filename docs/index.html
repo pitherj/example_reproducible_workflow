@@ -7,7 +7,7 @@
 
         <meta name="author" content="Jason" />
     
-        <meta name="date" content="2024-02-07" />
+        <meta name="date" content="2026-01-05" />
     
     <title>Example reproducible workflow</title>
 
@@ -158,7 +158,7 @@
         <ul class="authors">
           <li class="divider"></li>
                                 <li><span><i class="glyphicon glyphicon-user"></i> Jason</span></li>
-                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 2024-02-07</span></li>
+                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 2026-01-05</span></li>
                   </ul>     
       </div>
       <div class="book-body fixed">
@@ -186,11 +186,12 @@ pre, code {white-space:pre !important; overflow-x:auto}
 <h1><span class="header-section-number">1</span> Welcome</h1>
 <p>This website is geared towards researchers at any career stage who wish to improve the reproducibility of their research.</p>
 <p>The guidelines provided here make use of tools that we have found useful, and for which we’ve identified helpful online resources: R/RStudio, Git/Github, OSF, and Zotero. However, other tools can be used to equal effect for achieving the overall goal of reproducibility.</p>
-<p>The website is meant to be succinct, and used as a form of checklist. Throughout, we provide links to external resources that will help implement the steps of the workflow. Where available, we link to resources from the University of British Columbia, the authors’ home institution.</p>
+<p>The website is meant to be succinct, and used as a form of checklist and minimal guide. Throughout, we provide links to external resources that will help implement the steps of the workflow. Where available, we link to resources from the University of British Columbia, the authors’ home institution.</p>
+<p>We are currently working on a companion document entitled <a href="more/Concise_guidelines_reliable_research_DRAFT.pdf">“Concise guidelines for producing reliable research”</a>. Take a look!</p>
 <p>This work is licenced under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-Non Commercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a>.</p>
 <p><strong>Citation</strong></p>
 <p>Please use the following for citing this document:</p>
-<p>Pither, J., Vis-Dunbar, M. (2024). An example workflow for a reproducible and discoverable research project. <a href="https://pitherj.github.io/example_reproducible_workflow/" class="uri">https://pitherj.github.io/example_reproducible_workflow/</a></p>
+<p>Pither, J., Vis-Dunbar, M. (2025). An example workflow for a reproducible and discoverable research project. <a href="https://pitherj.github.io/example_reproducible_workflow/" class="uri">https://pitherj.github.io/example_reproducible_workflow/</a></p>
 <p>All source files are available at <a href="https://github.com/pitherj/example_reproducible_workflow/tree/main">https://github.com/pitherj/example_reproducible_workflow/tree/main</a>.</p>
 <p>This is a work in progress, and we welcome your feedback! Please email Jason if you have any (jason [dot] pither (at) ubc [dot] ca).</p>
 <p><strong>Need help?</strong></p>
@@ -208,7 +209,7 @@ pre, code {white-space:pre !important; overflow-x:auto}
 <li><a href="https://happygitwithr.com/github-acct">have GitHub account</a></li>
 <li><a href="https://orcid.org/">have ORCID account</a></li>
 <li><a href="https://osf.io/">have OSF account</a></li>
-<li><a href="https://happygitwithr.com/install-r-rstudio">ensure “R” and RStudio are installed</a></li>
+<li><a href="https://alliance-rdm-gdr.github.io/rdm-jumpstart/6-EXT-RRStudio.html">ensure “R” and RStudio are installed</a></li>
 <li><a href="https://www.zotero.org/">have Zotero account</a></li>
 <li><a href="https://www.zotero.org/">Zotero desktop app installed</a></li>
 <li>(optional) <a href="https://www.zotero.org/support/kb/safari_compatibility">Zotero browser connector activated</a></li>
@@ -220,7 +221,7 @@ pre, code {white-space:pre !important; overflow-x:auto}
 <h1><span class="header-section-number">3</span> Project setup</h1>
 <p>An overview of the workflow ecosystem is provided below, illustrating how the different tools connect to each other.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-with-knitr"></span>
-<img src="more/ecosystem_diagram.png" alt="Workflow ecosystem" width="100%" />
+<img src="more/ecosystem_diagram_grey.png" alt="Workflow ecosystem" width="100%" />
 <p class="caption">
 Figure 3.1: Workflow ecosystem
 </p>
@@ -401,8 +402,7 @@ Figure 3.2: Example project directory structure
 <div id="osf-2" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> OSF</h2>
 <ul>
-<li>clean up
-create new OSF private project that will eventually serve as the public project archive</li>
+<li>create new OSF private project that will eventually serve as the public project archive</li>
 <li>add all the relevant information as described in “Project Setup”
 <ul>
 <li>metadata, wiki pages, etc… (but don’t put info in wiki pages that could be used to identify authors)</li>
@@ -419,7 +419,7 @@ create new OSF private project that will eventually serve as the public project 
 <h2><span class="header-section-number">6.3</span> Manuscript submission</h2>
 <ul>
 <li>be sure to state that the study was pre-registered, and provide the link (DOI) to the pre-registration</li>
-<li>explain any deviations from pre-registered plans</li>
+<li>detail and explain any deviations from pre-registered plans</li>
 <li><strong>if you are NOT concerned with anonymity</strong>, optionally submit a preprint to a preprint server like <a href="https://ecoevorxiv.org/">EcoEvoRxiv</a> or <a href="https://osf.io/preprints">OSF Preprints</a></li>
 <li>consider submitting your manuscript to an <a href="https://scholcomm.ubc.ca/open-access/">open access</a></li>
 <li>regardless, ensure you can post a penultimate version of your manuscript for free, public access</li>
@@ -444,7 +444,7 @@ create new OSF private project that will eventually serve as the public project 
 <ul>
 <li>if you designed your original OSF project such that it (or a component) could serve as the archive, then proceed by making the OSF archive project public</li>
 <li>note it will create a permanent DOI for this public archive</li>
-<li>choose appropriate copyright license; unsure? Consult with <a href="https://library.ok.ubc.ca/about/contact/mathew-vis-dunbar/">subject librarian for literature searching and licencing considerations</a></li>
+<li><a href="https://ubc-library-rc.github.io/rdm/content/09_License-Research-Data.html">choose appropriate copyright license</a>. Still unsure? Consult with <a href="https://library.ok.ubc.ca/about/contact/mathew-vis-dunbar/">subject librarian for literature searching and licencing considerations</a></li>
 <li>ensure contributor (author) order on the archive is appropriate for the work done on the archived materials, e.g. scripts / data (not the main manuscript itself)</li>
 <li>include a clear statement illustrating how the archive should be cited; <strong>NOTE</strong>: this archive should have its own unique citation (separate from main paper)</li>
 <li>ensure all the metadata are complete</li>
