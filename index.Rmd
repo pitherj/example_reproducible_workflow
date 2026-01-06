@@ -73,7 +73,7 @@ An overview of the workflow ecosystem is provided below, illustrating how the di
 knitr::include_graphics("more/ecosystem_diagram_grey.png")
 ```
 
-An overview flow-chart of the entire workflow is provided in this [PDF document](more/full_example_workflow_diagram.pdf).
+An overview flow-chart of the entire workflow is provided in this [PDF document](more/full_example_workflow_diagram_2025.pdf).
 
 ***
 
