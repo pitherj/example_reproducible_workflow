@@ -27,7 +27,9 @@ This website is geared towards researchers at any career stage who wish to impro
 
 The guidelines provided here make use of tools that we have found useful, and for which we've identified helpful online resources: R/RStudio, Git/Github, OSF, and Zotero. However, other tools can be used to equal effect for achieving the overall goal of reproducibility. 
 
-The website is meant to be succinct, and used as a form of checklist. Throughout, we provide links to external resources that will help implement the steps of the workflow.  Where available, we link to resources from the University of British Columbia, the authors’ home institution.
+The website is meant to be succinct, and used as a form of checklist and minimal guide. Throughout, we provide links to external resources that will help implement the steps of the workflow.  Where available, we link to resources from the University of British Columbia, the authors’ home institution.
+
+We are currently working on a companion document entitled ["Concise guidelines for producing reliable research"](more/Concise_guidelines_reliable_research_DRAFT.pdf). Take a look!
 
 This work is licenced under the [Creative Commons Attribution-Non Commercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
@@ -35,7 +37,7 @@ This work is licenced under the [Creative Commons Attribution-Non Commercial-Sha
 
 Please use the following for citing this document:
 
-Pither, J., Vis-Dunbar, M. (2024). An example workflow for a reproducible and discoverable research project. https://pitherj.github.io/example_reproducible_workflow/
+Pither, J., Vis-Dunbar, M. (2025). An example workflow for a reproducible and discoverable research project. https://pitherj.github.io/example_reproducible_workflow/
 
 All source files are available at [https://github.com/pitherj/example_reproducible_workflow/tree/main](https://github.com/pitherj/example_reproducible_workflow/tree/main).  
 
@@ -55,7 +57,7 @@ This is a work in progress, and we welcome your feedback! Please email Jason if 
 - [have GitHub account](https://happygitwithr.com/github-acct)
 - [have ORCID account](https://orcid.org/)
 - [have OSF account](https://osf.io/)
-- [ensure “R” and RStudio are installed](https://happygitwithr.com/install-r-rstudio)
+- [ensure “R” and RStudio are installed](https://alliance-rdm-gdr.github.io/rdm-jumpstart/6-EXT-RRStudio.html)
 - [have Zotero account](https://www.zotero.org/)
 - [Zotero desktop app installed](https://www.zotero.org/)
 - (optional) [Zotero browser connector activated](https://www.zotero.org/support/kb/safari_compatibility)
@@ -68,7 +70,7 @@ This is a work in progress, and we welcome your feedback! Please email Jason if 
 An overview of the workflow ecosystem is provided below, illustrating how the different tools connect to each other.  
 
 ```{r img-with-knitr, echo=FALSE, fig.align='center', out.width='100%', fig.cap='Workflow ecosystem'}
-knitr::include_graphics("more/ecosystem_diagram.png")
+knitr::include_graphics("more/ecosystem_diagram_grey.png")
 ```
 
 An overview flow-chart of the entire workflow is provided in this [PDF document](more/full_example_workflow_diagram.pdf).
@@ -249,8 +251,7 @@ zip("myproject.zip", dir(full.names = TRUE, recursive = TRUE))
 
 ## OSF 
 
-- clean up 
-create new OSF private project that will eventually serve as the public project archive
+- create new OSF private project that will eventually serve as the public project archive
 - add all the relevant information as described in “Project Setup”
     - metadata, wiki pages, etc… (but don’t put info in wiki pages that could be used to identify authors)
 - copy all directories and files, including the “zip” file (excluding any sensitive data) from local RStudio project folder (repo) into the main OSF project storage (this makes it easier for someone to download materials).
@@ -264,7 +265,7 @@ create new OSF private project that will eventually serve as the public project 
 ## Manuscript submission 
 
 - be sure to state that the study was pre-registered, and provide the link (DOI) to the pre-registration
-- explain any deviations from pre-registered plans
+- detail and explain any deviations from pre-registered plans
 - **if you are NOT concerned with anonymity**, optionally submit a preprint to a preprint server like [EcoEvoRxiv](https://ecoevorxiv.org/) or [OSF Preprints](https://osf.io/preprints)
 - consider submitting your manuscript to an [open access](https://scholcomm.ubc.ca/open-access/)
 - regardless, ensure you can post a penultimate version of your manuscript for free, public access
@@ -288,7 +289,7 @@ Examples of archives on OSF are provided [here](https://osf.io/jfy35/) and [here
 
 - if you designed your original OSF project such that it (or a component) could serve as the archive, then proceed by making the OSF archive project public
 - note it will create a permanent DOI for this public archive
-- choose appropriate copyright license; unsure? Consult with [subject librarian for literature searching and licencing considerations](https://library.ok.ubc.ca/about/contact/mathew-vis-dunbar/)
+- [choose appropriate copyright license](https://ubc-library-rc.github.io/rdm/content/09_License-Research-Data.html). Still unsure? Consult with [subject librarian for literature searching and licencing considerations](https://library.ok.ubc.ca/about/contact/mathew-vis-dunbar/)
 - ensure contributor (author) order on the archive is appropriate for the work done on the archived materials, e.g. scripts / data (not the main manuscript itself)
 - include a clear statement illustrating how the archive should be cited; **NOTE**: this archive should have its own unique citation (separate from main paper) 
 - ensure all the metadata are complete
