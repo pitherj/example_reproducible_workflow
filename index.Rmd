@@ -55,7 +55,7 @@ This is a work in progress, and we welcome your feedback! Please email Jason if 
 
 - [have Git installed on local computer](https://happygitwithr.com/install-git)
 - [have GitHub account](https://happygitwithr.com/github-acct)
-- [have ORCID account](https://orcid.org/)
+- (optional) [have ORCID account](https://orcid.org/)
 - [have OSF account](https://osf.io/)
 - [ensure “R” and RStudio are installed](https://alliance-rdm-gdr.github.io/rdm-jumpstart/6-EXT-RRStudio.html)
 - [have Zotero account](https://www.zotero.org/)
@@ -131,8 +131,8 @@ You can explore other UBC-affiliated OSF projects [here](https://osf.io/institut
 
 ## Zotero
 
-- create a Zotero library (or [shared group library](https://www.zotero.org/groups/) if collaborating) NOTE: store attachments (PDFs) on LOCAL or OneDrive (not on Zotero cloud)
-- use add-ons such as Zotfile and [Zotero better-notes](https://github.com/windingwind/zotero-better-notes) to manage citations and notes
+- create a Zotero library (or [shared group library](https://www.zotero.org/groups/) if collaborating) NOTE: store attachments (PDFs) on LOCAL or OneDrive (not on Zotero cloud due to storage limits)
+
 
 ***
 
