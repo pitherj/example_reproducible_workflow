@@ -111,7 +111,7 @@ chmod a=r rawdata
 
 Find out about the functionality of the [OSF platform here](https://help.osf.io/?_gl=1*lewbss*_ga*MzMzMjg1Nzg1LjE3MDQ4MzkwOTQ.*_ga_YE9BMGGWX8*MTcwNzI0NTM4OS4yNS4xLjE3MDcyNDY5MzQuNTkuMC4w).
 
-UBC subscribes to [OSF Institutions](https://guides.library.ubc.ca/OSF), which allows UBC students, staff, and faculty to [log in to OSF with their CWL credentials](https://guides.library.ubc.ca/osf). 
+UBC subscribes to [OSF Institutions](https://guides.library.ubc.ca/OSF), which allows UBC students, staff, and faculty to [log in to OSF with their CWL credentials](https://guides.library.ubc.ca/osf). **NOTE**: if you intend on continuing in academia beyond UBC, it's likely best to create your OSF account using your personal email/info, rather than through your UBC CWL (because you may lose access to your CWL credentials).
 
 You can explore other UBC-affiliated OSF projects [here](https://osf.io/institutions/ubc).  
 
@@ -187,9 +187,9 @@ Pre-registering a study is one of the most effective ways to improve the rigour 
 
 # Analysis & Writing {#analysis}
 
-You can optionally write your manuscript in markdown (e.g. using the RStudio editor), in which case you can take advantage of version control that you already have set up in your RStudio project.  
+You can optionally write your manuscript in R markdown or Quarto (e.g. using the RStudio editor), in which case you can take advantage of version control that you already have set up in your RStudio project.  
 
-If you choose to do this, you can also (optinally) install and use:  
+If you choose to do this, you can also (optionally) install and use:  
 - the [`rticles` R package](https://pkgs.rstudio.com/rticles/articles/rticles.html) to write manuscripts using journal markdown templates within a markdown editor (including RStudio)  
 - the [`trackdown` package](https://cran.r-project.org/web/packages/trackdown/vignettes/trackdown-workflow.html) for collaborative editing of your markdown manuscript via Google docs.  
 - use citation tools within the RStudio editor (Zotero is embedded in RStudio under the [“Visual” editing mode](https://rstudio.github.io/visual-markdown-editing/citations.html)).  
@@ -203,7 +203,7 @@ If you opt to write your manuscript using a word-processing software (e.g. Word)
 
 ## RStudio + Github
 
-- [frequent and regular versioning (commit/push/pull)](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html#integrations) of coding & markdown authoring work to GitHub
+- [frequent and regular versioning (commit/push/pull)](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html#integrations) of coding & markdown/Quarto authoring work to GitHub
 - **REMEMBER**: ensure that only non-sensitive data and those with acceptable license get pushed to GitHub
 - any sensitive data only store locally, backed up on private OSF component
 - beware of storage limitations on [GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage) & [OSF](https://help.osf.io/article/386-project-storage)
@@ -285,13 +285,13 @@ Once your manuscript has been accepted for publication, make final preparations 
 
 ## Option 1: OSF
 
-Examples of archives on OSF are provided [here](https://osf.io/jfy35/) and [here](https://osf.io/ujnw2/).  
+Examples of archives on OSF are provided [here](https://osf.io/jfy35/) and [here](https://osf.io/ujnw2/).  You'll see that these example archives are far from perfect, and do employ different strategies around code/data archiving, but they nonetheless check many of the boxes!
 
 - if you designed your original OSF project such that it (or a component) could serve as the archive, then proceed by making the OSF archive project public
 - note it will create a permanent DOI for this public archive
 - [choose appropriate copyright license](https://ubc-library-rc.github.io/rdm/content/09_License-Research-Data.html). Still unsure? Consult with [subject librarian for literature searching and licencing considerations](https://library.ok.ubc.ca/about/contact/mathew-vis-dunbar/)
 - ensure contributor (author) order on the archive is appropriate for the work done on the archived materials, e.g. scripts / data (not the main manuscript itself)
-- include a clear statement illustrating how the archive should be cited; **NOTE**: this archive should have its own unique citation (separate from main paper) 
+- include a clear statement illustrating how the archive should be cited; **NOTE**: this archive should have its own unique citation (separate from main paper, and perhaps different author order) 
 - ensure all the metadata are complete
 - use "READ ME FIRST" as the heading at the top of the main wiki page, like in [this example](https://osf.io/ujnw2/), then include in that wiki page all information and instructions relevant for reproducibility, including: 
   - include a link / DOI to published paper
@@ -319,7 +319,7 @@ Note that you can [connect your Github repository to the Dataverse archive](http
 
 ## Option 3: OSF + Dataverse
 
-For an example of a blended approach, here's a [main archive is on OSF](https://osf.io/jfy35/), and for the purpose of ensuring institutional affiliation and memory, a skeleton archive containing only metadata is available on UBC's [Dataverse](https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/I6BHSX).  
+For an example of a blended approach, here's a [main archive on OSF](https://osf.io/jfy35/), and for the purpose of ensuring institutional affiliation and memory, a skeleton archive containing only metadata is available on UBC's [Dataverse](https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/I6BHSX).  
 
 ***
 

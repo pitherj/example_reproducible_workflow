@@ -260,7 +260,7 @@ Figure 3.2: Example project directory structure
 <div id="osf" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> OSF</h2>
 <p>Find out about the functionality of the <a href="https://help.osf.io/?_gl=1*lewbss*_ga*MzMzMjg1Nzg1LjE3MDQ4MzkwOTQ.*_ga_YE9BMGGWX8*MTcwNzI0NTM4OS4yNS4xLjE3MDcyNDY5MzQuNTkuMC4w">OSF platform here</a>.</p>
-<p>UBC subscribes to <a href="https://guides.library.ubc.ca/OSF">OSF Institutions</a>, which allows UBC students, staff, and faculty to <a href="https://guides.library.ubc.ca/osf">log in to OSF with their CWL credentials</a>.</p>
+<p>UBC subscribes to <a href="https://guides.library.ubc.ca/OSF">OSF Institutions</a>, which allows UBC students, staff, and faculty to <a href="https://guides.library.ubc.ca/osf">log in to OSF with their CWL credentials</a>. <strong>NOTE</strong>: if you intend on continuing in academia beyond UBC, it’s likely best to create your OSF account using your personal email/info, rather than through your UBC CWL (because you may lose access to your CWL credentials).</p>
 <p>You can explore other UBC-affiliated OSF projects <a href="https://osf.io/institutions/ubc">here</a>.</p>
 <ul>
 <li>create new OSF project (or component on existing project) for managing this project, materials and for serving as a central “hub” for all project components (e.g. github, google drive etc…)</li>
@@ -339,8 +339,8 @@ Figure 3.2: Example project directory structure
 </div>
 <div id="analysis" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Analysis &amp; Writing</h1>
-<p>You can optionally write your manuscript in markdown (e.g. using the RStudio editor), in which case you can take advantage of version control that you already have set up in your RStudio project.</p>
-<p>If you choose to do this, you can also (optinally) install and use:<br />
+<p>You can optionally write your manuscript in R markdown or Quarto (e.g. using the RStudio editor), in which case you can take advantage of version control that you already have set up in your RStudio project.</p>
+<p>If you choose to do this, you can also (optionally) install and use:<br />
 - the <a href="https://pkgs.rstudio.com/rticles/articles/rticles.html"><code>rticles</code> R package</a> to write manuscripts using journal markdown templates within a markdown editor (including RStudio)<br />
 - the <a href="https://cran.r-project.org/web/packages/trackdown/vignettes/trackdown-workflow.html"><code>trackdown</code> package</a> for collaborative editing of your markdown manuscript via Google docs.<br />
 - use citation tools within the RStudio editor (Zotero is embedded in RStudio under the <a href="https://rstudio.github.io/visual-markdown-editing/citations.html">“Visual” editing mode</a>).</p>
@@ -352,7 +352,7 @@ Figure 3.2: Example project directory structure
 <div id="rstudio-github-1" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> RStudio + Github</h2>
 <ul>
-<li><a href="https://docs.posit.co/ide/user/ide/guide/tools/version-control.html#integrations">frequent and regular versioning (commit/push/pull)</a> of coding &amp; markdown authoring work to GitHub</li>
+<li><a href="https://docs.posit.co/ide/user/ide/guide/tools/version-control.html#integrations">frequent and regular versioning (commit/push/pull)</a> of coding &amp; markdown/Quarto authoring work to GitHub</li>
 <li><strong>REMEMBER</strong>: ensure that only non-sensitive data and those with acceptable license get pushed to GitHub</li>
 <li>any sensitive data only store locally, backed up on private OSF component</li>
 <li>beware of storage limitations on <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage">GitHub</a> &amp; <a href="https://help.osf.io/article/386-project-storage">OSF</a></li>
@@ -439,13 +439,13 @@ Figure 3.2: Example project directory structure
 <p>Once your manuscript has been accepted for publication, make final preparations for archiving all relevant materials to ensure reproducibility and discoverability.</p>
 <div id="option-1-osf" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> Option 1: OSF</h2>
-<p>Examples of archives on OSF are provided <a href="https://osf.io/jfy35/">here</a> and <a href="https://osf.io/ujnw2/">here</a>.</p>
+<p>Examples of archives on OSF are provided <a href="https://osf.io/jfy35/">here</a> and <a href="https://osf.io/ujnw2/">here</a>. You’ll see that these example archives are far from perfect, and do employ different strategies around code/data archiving, but they nonetheless check many of the boxes!</p>
 <ul>
 <li>if you designed your original OSF project such that it (or a component) could serve as the archive, then proceed by making the OSF archive project public</li>
 <li>note it will create a permanent DOI for this public archive</li>
 <li><a href="https://ubc-library-rc.github.io/rdm/content/09_License-Research-Data.html">choose appropriate copyright license</a>. Still unsure? Consult with <a href="https://library.ok.ubc.ca/about/contact/mathew-vis-dunbar/">subject librarian for literature searching and licencing considerations</a></li>
 <li>ensure contributor (author) order on the archive is appropriate for the work done on the archived materials, e.g. scripts / data (not the main manuscript itself)</li>
-<li>include a clear statement illustrating how the archive should be cited; <strong>NOTE</strong>: this archive should have its own unique citation (separate from main paper)</li>
+<li>include a clear statement illustrating how the archive should be cited; <strong>NOTE</strong>: this archive should have its own unique citation (separate from main paper, and perhaps different author order)</li>
 <li>ensure all the metadata are complete</li>
 <li>use “READ ME FIRST” as the heading at the top of the main wiki page, like in <a href="https://osf.io/ujnw2/">this example</a>, then include in that wiki page all information and instructions relevant for reproducibility, including:
 <ul>
@@ -472,7 +472,7 @@ Figure 3.2: Example project directory structure
 </div>
 <div id="option-3-osf-dataverse" class="section level2" number="7.3">
 <h2><span class="header-section-number">7.3</span> Option 3: OSF + Dataverse</h2>
-<p>For an example of a blended approach, here’s a <a href="https://osf.io/jfy35/">main archive is on OSF</a>, and for the purpose of ensuring institutional affiliation and memory, a skeleton archive containing only metadata is available on UBC’s <a href="https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/I6BHSX">Dataverse</a>.</p>
+<p>For an example of a blended approach, here’s a <a href="https://osf.io/jfy35/">main archive on OSF</a>, and for the purpose of ensuring institutional affiliation and memory, a skeleton archive containing only metadata is available on UBC’s <a href="https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/I6BHSX">Dataverse</a>.</p>
 <hr />
 </div>
 </div>
