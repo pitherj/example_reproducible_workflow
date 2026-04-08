@@ -29,7 +29,7 @@ The guidelines provided here make use of tools that we have found useful, and fo
 
 The website is meant to be succinct, and used as a form of checklist and minimal guide. Throughout, we provide links to external resources that will help implement the steps of the workflow.  Where available, we link to resources from the University of British Columbia, the authors’ home institution.
 
-We are currently working on a companion document entitled ["Concise guidelines for producing reliable research"](more/Concise_guidelines_reliable_research_DRAFT.pdf). Take a look!
+We have a new (April 2026) preprint introducing a new tool: ["Concise guidelines for producing reliable research"](more/Pither_Vis-Dunbar_concise_guidelines_preprint.pdf). A complementary R package called ["rrchecklist"](https://github.com/pitherj/rrchecklist) is also introduced. Take a look!
 
 This work is licenced under the [Creative Commons Attribution-Non Commercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
