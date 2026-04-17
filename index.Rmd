@@ -93,7 +93,7 @@ knitr::include_graphics("more/2026-04-17_directory_structure.png")
 
 - while any number of directory structures are suitable, the key feature is ensuring the `data_raw` folder holds only raw data, and ideally is write-protected (read-only) once all data have been acquired.  Once you're sure you've acquired all your raw data, here is how you can achieve this on a Mac / Unix / Linux based computer:
 
-Click on the "terminal" tab in your RStudio console window, and type the following command (assuming your raw data directory name is "rawdata"):
+Click on the "terminal" tab in your RStudio console window, and type the following command (assuming your raw data directory name is "data_raw"):
 
 ```
 chmod a=r data_raw
@@ -244,7 +244,7 @@ In your day-to-day work, which involves regular backing up of files/data (some o
 
 - knit the manuscript to PDF (journal may have a direct markdown submission option)
 - ensure it rendered correctly, including symbols, figures, formatting, citations etc..
-- double-check / update `_DATA-DICTIONARY.md` file for both rawdata and outdata directories and ensure `_README.md` files in root and rawdata directories up to date and correct.
+- double-check / update `DATA-DICTIONARY.md` file for both data_raw and outdata directories and ensure `README.md` files in root and data_raw directories up to date and correct.
 - create a “zip” file of all contents of your project directory and sub-directories. Example code for this that you can type in your RStudio command console (assuming you don’t need to exclude any sensitive files or data): 
 
 ```
@@ -321,7 +321,7 @@ Note that you can [connect your Github repository to the Dataverse archive](http
 
 ***
 
-## Option 3: OSF + Dataverse
+## Option 3: OSF + Borealis Dataverse
 
 For an example of a blended approach, here's a [main archive on OSF](https://osf.io/jfy35/), and for the purpose of ensuring institutional affiliation and memory, a skeleton archive containing only metadata is available on UBC's [Dataverse](https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/I6BHSX).  
 

@@ -151,7 +151,7 @@
           <ul>
           <li><a href="#option-1-osf" id="toc-option-1-osf"><span class="toc-section-number">7.1</span> Option 1: OSF</a></li>
           <li><a href="#option-2-borealis-dataverse" id="toc-option-2-borealis-dataverse"><span class="toc-section-number">7.2</span> Option 2: Borealis Dataverse</a></li>
-          <li><a href="#option-3-osf-dataverse" id="toc-option-3-osf-dataverse"><span class="toc-section-number">7.3</span> Option 3: OSF + Dataverse</a></li>
+          <li><a href="#option-3-osf-borealis-dataverse" id="toc-option-3-osf-borealis-dataverse"><span class="toc-section-number">7.3</span> Option 3: OSF + Borealis Dataverse</a></li>
           </ul></li>
           <li><a href="#cleanup" id="toc-cleanup"><span class="toc-section-number">8</span> Cleanup</a></li>
           </ul>
@@ -248,7 +248,7 @@ Figure 3.2: Example project directory structure
 <ul>
 <li>while any number of directory structures are suitable, the key feature is ensuring the <code>data_raw</code> folder holds only raw data, and ideally is write-protected (read-only) once all data have been acquired. Once you’re sure you’ve acquired all your raw data, here is how you can achieve this on a Mac / Unix / Linux based computer:</li>
 </ul>
-<p>Click on the “terminal” tab in your RStudio console window, and type the following command (assuming your raw data directory name is “rawdata”):</p>
+<p>Click on the “terminal” tab in your RStudio console window, and type the following command (assuming your raw data directory name is “data_raw”):</p>
 <pre><code>chmod a=r data_raw</code></pre>
 <ul>
 <li>initialize a <code>README.md</code> or <code>README.txt</code> file for root- and each sub-directory (can be fleshed out later)</li>
@@ -399,7 +399,7 @@ Figure 3.2: Example project directory structure
 <ul>
 <li>knit the manuscript to PDF (journal may have a direct markdown submission option)</li>
 <li>ensure it rendered correctly, including symbols, figures, formatting, citations etc..</li>
-<li>double-check / update <code>_DATA-DICTIONARY.md</code> file for both rawdata and outdata directories and ensure <code>_README.md</code> files in root and rawdata directories up to date and correct.</li>
+<li>double-check / update <code>DATA-DICTIONARY.md</code> file for both data_raw and outdata directories and ensure <code>README.md</code> files in root and data_raw directories up to date and correct.</li>
 <li>create a “zip” file of all contents of your project directory and sub-directories. Example code for this that you can type in your RStudio command console (assuming you don’t need to exclude any sensitive files or data):</li>
 </ul>
 <pre><code>zip(&quot;myproject.zip&quot;, dir(full.names = TRUE, recursive = TRUE))</code></pre>
@@ -477,8 +477,8 @@ Figure 3.2: Example project directory structure
 <p>Note that you can <a href="https://borealisdata.ca/guides/en/latest/admin/integrations.html#github">connect your Github repository to the Dataverse archive</a>.</p>
 <hr />
 </div>
-<div id="option-3-osf-dataverse" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Option 3: OSF + Dataverse</h2>
+<div id="option-3-osf-borealis-dataverse" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Option 3: OSF + Borealis Dataverse</h2>
 <p>For an example of a blended approach, here’s a <a href="https://osf.io/jfy35/">main archive on OSF</a>, and for the purpose of ensuring institutional affiliation and memory, a skeleton archive containing only metadata is available on UBC’s <a href="https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/I6BHSX">Dataverse</a>.</p>
 <hr />
 </div>
