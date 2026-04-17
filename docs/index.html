@@ -7,7 +7,7 @@
 
         <meta name="author" content="Jason" />
     
-        <meta name="date" content="2026-04-07" />
+        <meta name="date" content="2026-04-17" />
     
     <title>Example reproducible workflow</title>
 
@@ -124,7 +124,8 @@
           <ul>
           <li><a href="#rstudio-github" id="toc-rstudio-github"><span class="toc-section-number">3.1</span> RStudio + Github</a></li>
           <li><a href="#osf" id="toc-osf"><span class="toc-section-number">3.2</span> OSF</a></li>
-          <li><a href="#zotero" id="toc-zotero"><span class="toc-section-number">3.3</span> Zotero</a></li>
+          <li><a href="#additional-backup-storage" id="toc-additional-backup-storage"><span class="toc-section-number">3.3</span> Additional backup storage</a></li>
+          <li><a href="#zotero" id="toc-zotero"><span class="toc-section-number">3.4</span> Zotero</a></li>
           </ul></li>
           <li><a href="#prereg" id="toc-prereg"><span class="toc-section-number">4</span> Pre-registration</a>
           <ul>
@@ -158,7 +159,7 @@
         <ul class="authors">
           <li class="divider"></li>
                                 <li><span><i class="glyphicon glyphicon-user"></i> Jason</span></li>
-                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 2026-04-07</span></li>
+                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 2026-04-17</span></li>
                   </ul>     
       </div>
       <div class="book-body fixed">
@@ -221,12 +222,11 @@ pre, code {white-space:pre !important; overflow-x:auto}
 <h1><span class="header-section-number">3</span> Project setup</h1>
 <p>An overview of the workflow ecosystem is provided below, illustrating how the different tools connect to each other.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-with-knitr"></span>
-<img src="more/ecosystem_diagram_grey.png" alt="Workflow ecosystem" width="100%" />
+<img src="more/2026-04-17_workflow_infrastructure.png" alt="Workflow ecosystem" width="100%" />
 <p class="caption">
 Figure 3.1: Workflow ecosystem
 </p>
 </div>
-<p>An overview flow-chart of the entire workflow is provided in this <a href="more/full_example_workflow_diagram_2025.pdf">PDF document</a>.</p>
 <hr />
 <div id="rstudio-github" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> RStudio + Github</h2>
@@ -240,20 +240,20 @@ Figure 3.1: Workflow ecosystem
 <li>set up an appropriate directory structure, as illustrated in the example below</li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
-<img src="more/example_directory_structure.png" alt="Example project directory structure" width="100%" />
+<img src="more/2026-04-17_directory_structure.png" alt="Example project directory structure" width="100%" />
 <p class="caption">
 Figure 3.2: Example project directory structure
 </p>
 </div>
 <ul>
-<li>while any number of directory structures are suitable, the key feature is ensuring the <code>rawdata</code> folder holds only raw data, and ideally is write-protected (read-only) once all data have been acquired. Once you’re sure you’ve acquired all your raw data, here is how you can achieve this on a Mac / Unix / Linux based computer:</li>
+<li>while any number of directory structures are suitable, the key feature is ensuring the <code>data_raw</code> folder holds only raw data, and ideally is write-protected (read-only) once all data have been acquired. Once you’re sure you’ve acquired all your raw data, here is how you can achieve this on a Mac / Unix / Linux based computer:</li>
 </ul>
 <p>Click on the “terminal” tab in your RStudio console window, and type the following command (assuming your raw data directory name is “rawdata”):</p>
-<pre><code>chmod a=r rawdata</code></pre>
+<pre><code>chmod a=r data_raw</code></pre>
 <ul>
-<li>initialize a <code>_README.md</code> or <code>_README.txt</code> file for root- and each sub-directory (can be fleshed out later)</li>
+<li>initialize a <code>README.md</code> or <code>README.txt</code> file for root- and each sub-directory (can be fleshed out later)</li>
 <li>use the <a href="https://usethis.r-lib.org/index.html"><code>usethis</code> R package</a> and its <code>edit_git_ignore</code> function to create a <code>.gitignore</code> file and populate it with text from this <a href="https://github.com/github/gitignore/blob/main/R.gitignore">template</a>.</li>
-<li><strong>NOTE</strong> Make sure you ignore all sensitive and copyrighted files, and it’s recommended to ignore data files; for example, you could add “rawdata/” to your .gitignore file to ignore everything in that directory.</li>
+<li><strong>NOTE</strong> Make sure you ignore all sensitive and copyrighted files, and it’s recommended to ignore data files; for example, you could add “data/data_raw/” to your .gitignore file to ignore everything in that directory.</li>
 </ul>
 <hr />
 </div>
@@ -277,8 +277,15 @@ Figure 3.2: Example project directory structure
 </ul>
 <hr />
 </div>
-<div id="zotero" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Zotero</h2>
+<div id="additional-backup-storage" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Additional backup storage</h2>
+<ul>
+<li>Use OneDrive or another storage facility to regularly (e.g. weekly) back up your work from your local computer</li>
+</ul>
+<hr />
+</div>
+<div id="zotero" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Zotero</h2>
 <ul>
 <li>create a Zotero library (or <a href="https://www.zotero.org/groups/">shared group library</a> if collaborating) NOTE: store attachments (PDFs) on LOCAL or OneDrive (not on Zotero cloud due to storage limits)</li>
 </ul>

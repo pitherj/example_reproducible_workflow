@@ -70,10 +70,8 @@ This is a work in progress, and we welcome your feedback! Please email Jason if 
 An overview of the workflow ecosystem is provided below, illustrating how the different tools connect to each other.  
 
 ```{r img-with-knitr, echo=FALSE, fig.align='center', out.width='100%', fig.cap='Workflow ecosystem'}
-knitr::include_graphics("more/ecosystem_diagram_grey.png")
+knitr::include_graphics("more/2026-04-17_workflow_infrastructure.png")
 ```
-
-An overview flow-chart of the entire workflow is provided in this [PDF document](more/full_example_workflow_diagram_2025.pdf).
 
 ***
 
@@ -90,20 +88,20 @@ For help with the following steps, consult the [happygitwithr.com website](https
 - set up an appropriate directory structure, as illustrated in the example below
 
 ```{r, echo=FALSE, fig.align='center', out.width='100%', fig.cap='Example project directory structure'}
-knitr::include_graphics("more/example_directory_structure.png")
+knitr::include_graphics("more/2026-04-17_directory_structure.png")
 ```
 
-- while any number of directory structures are suitable, the key feature is ensuring the `rawdata` folder holds only raw data, and ideally is write-protected (read-only) once all data have been acquired.  Once you're sure you've acquired all your raw data, here is how you can achieve this on a Mac / Unix / Linux based computer:
+- while any number of directory structures are suitable, the key feature is ensuring the `data_raw` folder holds only raw data, and ideally is write-protected (read-only) once all data have been acquired.  Once you're sure you've acquired all your raw data, here is how you can achieve this on a Mac / Unix / Linux based computer:
 
 Click on the "terminal" tab in your RStudio console window, and type the following command (assuming your raw data directory name is "rawdata"):
 
 ```
-chmod a=r rawdata
+chmod a=r data_raw
 ```
 
-- initialize a `_README.md` or `_README.txt` file for root- and each sub-directory (can be fleshed out later)
+- initialize a `README.md` or `README.txt` file for root- and each sub-directory (can be fleshed out later)
 - use the [`usethis` R package](https://usethis.r-lib.org/index.html) and its `edit_git_ignore` function to create a `.gitignore` file and populate it with text from this [template](https://github.com/github/gitignore/blob/main/R.gitignore).
-- **NOTE** Make sure you ignore all sensitive and copyrighted files, and it’s recommended to ignore data files; for example, you could add “rawdata/” to your .gitignore file to ignore everything in that directory.
+- **NOTE** Make sure you ignore all sensitive and copyrighted files, and it’s recommended to ignore data files; for example, you could add “data/data_raw/” to your .gitignore file to ignore everything in that directory.
 
 ***
 
@@ -126,6 +124,12 @@ You can explore other UBC-affiliated OSF projects [here](https://osf.io/institut
 - create other Wiki pages e.g. to provide estimated project timeline, extra information etc…
 - your OSF project can be linked to pre-registration when it is submitted (see below)
 - optionally connect [“add-ons” to OSF](https://help.osf.io/article/377-add-ons-api-home-page) such as Zotero and Github
+
+***
+
+## Additional backup storage
+
+- Use OneDrive or another storage facility to regularly (e.g. weekly) back up your work from your local computer
 
 ***
 
