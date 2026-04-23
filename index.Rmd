@@ -82,7 +82,6 @@ Before going further, be sure to read through this [UBC website](https://ubc-lib
 For help with the following steps, consult the [happygitwithr.com website](https://happygitwithr.com/connect-intro).
 
 - create GitHub repository for the project (can optionally be private for now)
-- (OPTIONAL) can use [`workflowr` package](https://workflowr.github.io/workflowr/articles/wflow-09-workshop.html) to facilitate following steps
 - create new RStudio project, enabling version control by connecting to GitHub repo
 - enable `renv` option to facilitate [package management](https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html)
 - set up an appropriate directory structure, as illustrated in the example below
